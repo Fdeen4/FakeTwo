@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <div th:replace="fragment :: css"></div>
+</head>
+<body>
+<nav th:replace="fragment :: navigation"></nav>
+<h1 sec:authorize="hasAuthority('SUSPENDED')" class="text-center text-danger">YOU HAVE BEEN BANNED! contact the admin</h1>
+<h1 sec:authorize="!isAuthenticated()">YOU DON'T HAVE THE RIGHT CREDENTIALS!</h1>
+</body>
+<div th:replace="fragment :: js"></div>
+</html>

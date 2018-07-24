@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <div th:replace="fragment :: css"></div>
+</head>
+<body>
+<nav th:replace="fragment :: navigation"></nav>
+<div class="container mt-5">
+    <ul class="list-group" th:inine="text">
+        <li class="list-group-item" th:each="user : ${users}" >
+            <a th:href="@{/showprofile/{id}(id=${user.id})}">
+                <div th:unless="${user.profile.profilepicture}">
+                    <img src="/img/dummyprofile.jpg" height="75" width="75"/>
+                </div>
+                <div th:if="${user.profile.profilepicture}">
+                    <img class="rounded-circle" th:src="${user.profile.profilepicture}"  height="75" width="75"/>
+                </div>
+            </a>
+            Username: [[${user.username}]] &nbsp; &nbsp;
+            <span>Authorities: <small th:each="role : ${user.roles}">[[${role.role}]], </small></span>
+            <span class="float-right badge badge-danger badge-pill"><a th:href="@{/manage/banuser/{id}(id=${user.id})}">Ban</a></span>
+        </li>
+    </ul>
+</div>
+</body>
+<div th:replace="fragment :: js"></div>
+</html>
+<!--th:if="${not user.admin}"-->

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity4">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/ust.css" />
+    <meta charset="UTF-8"/>
+    <title th:text="#{appname}">Title</title>
+    <div th:replace="fragment :: css"></div>
+    <link type="text/css" rel="stylesheet" href="/css/ust.css" />
+    <link type="text/css" rel="stylesheet" href="/css/wheather.css" />
+    <link type="text/css" rel="stylesheet" href="/css/wheather2css" />
+    <script src="/js/jquery2.js"></script>
+    <script>$(document).ready(function(){
+        $(".box13").click(function(){
+            $(".box13").css('background-color','black');
+            $(".box11").css('background-color','black');
+            $(".box12").css('background-color','black');
+            $(".box14").css('background-color','black');
+            $(".frnpad").fadeIn("slow");
+            $(".frnpadx").fadeIn("slow");
+            $(".aboutpad").fadeOut("slow");
+            $(".aboutpadx").fadeOut("slow");
+            $(".phpad").fadeOut("slow");
+            $(".phpadx").fadeOut("slow");
+            $(".postp").fadeOut("slow");
+            $(".postpx").fadeOut("slow");
+            $(".post1p").fadeOut("slow");
+            $(".post1px").fadeOut("slow");
+            $(".abox1").fadeOut("slow");
+            $(".abox1x").fadeOut("slow");
+            $(".abox2").fadeOut("slow");
+            $(".abox2x").fadeOut("slow");
+            $(".abox3").fadeOut("slow");
+            $(".abox3x").fadeOut("slow");
+        });
+        $(".box14").click(function(){
+            $(".box14").css('background-color','black');
+            $(".box11").css('background-color','black');
+            $(".box12").css('background-color','black');
+            $(".box13").css('background-color','black');
+            $(".phpad").fadeIn("slow");
+            $(".phpadx").fadeIn("slow");
+            $(".aboutpad").fadeOut("slow");
+            $(".aboutpadx").fadeOut("slow");
+            $(".frnpad").fadeOut("slow");
+            $(".frnpadx").fadeOut("slow");
+            $(".postp").fadeOut("slow");
+            $(".postpx").fadeOut("slow");
+            $(".post1p").fadeOut("slow");
+            $(".post1px").fadeOut("slow");
+            $(".abox1").fadeOut("slow");
+            $(".abox1x").fadeOut("slow");
+            $(".abox2").fadeOut("slow");
+            $(".abox2x").fadeOut("slow");
+            $(".abox3").fadeOut("slow");
+            $(".abox3x").fadeOut("slow");
+        });
+        $(".box12").click(function(){
+            $(".box12").css('background-color','black');
+            $(".box11").css('background-color','black');
+            $(".box13").css('background-color','black');
+            $(".box14").css('background-color','black');
+            $(".aboutpad").fadeIn("slow");
+            $(".aboutpadx").fadeIn("slow");
+            $(".frnpad").fadeOut("slow");
+            $(".frnpadx").fadeOut("slow");
+            $(".phpad").fadeOut("slow");
+            $(".phpadx").fadeOut("slow");
+            $(".postp").fadeOut("slow");
+            $(".postpx").fadeOut("slow");
+            $(".post1p").fadeOut("slow");
+            $(".post1px").fadeOut("slow");
+            $(".abox1").fadeOut("slow");
+            $(".abox1x").fadeOut("slow");
+            $(".abox2").fadeOut("slow");
+            $(".abox2x").fadeOut("slow");
+            $(".abox3").fadeOut("slow");
+            $(".abox3x").fadeOut("slow");
+        });
+        $(".box11").click(function(){
+            $(".box11").css('background-color','black');
+            $(".box12").css('background-color','black');
+            $(".box13").css('background-color','black');
+            $(".box14").css('background-color','black');
+            $(".aboutpad").fadeOut("slow");
+            $(".aboutpadx").fadeOut("slow");
+            $(".postp").fadeIn("slow");
+            $(".postpx").fadeIn("slow");
+            $(".post1p").fadeIn("slow");
+            $(".post1px").fadeIn("slow");
+            $(".abox1").fadeIn("slow");
+            $(".abox1x").fadeIn("slow");
+            $(".abox2").fadeIn("slow");
+            $(".abox2x").fadeIn("slow");
+            $(".abox3").fadeIn("slow");
+            $(".abox3x").fadeIn("slow");
+            $(".frnpad").fadeOut("slow");
+            $(".frnpadx").fadeOut("slow");
+            $(".phpad").fadeOut("slow");
+            $(".phpadx").fadeOut("slow");
+
+        });
+        $(".box13").click(function(){})
+
+
+    });
+    </script>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="sun"></div>
+    <div class="cloud">
+        <div class="cloud1">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="cloud1 c_shadow">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cloud_s">
+        <div class="cloud1">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="cloud1 c_shadow">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cloud_vs">
+        <div class="cloud1">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="cloud1 c_shadow">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="haze"></div>
+    <div class="haze_stripe"></div>
+    <div class="haze_stripe"></div>
+    <div class="haze_stripe"></div>
+    <div class="thunder"></div>
+    <div class="rain">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="sleet">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="text">
+        <ul>
+            <li>Mostly Sunny</li>
+            <li>Partly Sunny</li>
+            <li>Partly Cloudy</li>
+            <li>Mostly Cloudy</li>
+            <li>Cloudy</li>
+            <li>Hazy</li>
+            <li>Thunderstorm</li>
+            <li>Rain</li>
+            <li>Sleet</li>
+        </ul>
+    </div>
+</div>
+<div id="fabrizio"></div>
+<a href="http://fabrizio.co">fabrizio.co</a>
+<div class="header1">
+    <div id="img3" class="header1"><a th:href="@{/}"><img src="/img/logo2.png" id="img3"/></a></div>
+    <div id="searcharea" class="header1"><input placeholder="search here..." type="text" id="searchbox"/></div>
+    <div id="profilearea" class="header1"><a th:href="@{/profile}"><i class="material-icons" style="font-size:48px;">person</i></a></div>
+    <div id="profilearea1" class="header1">
+        <a th:href="@{/profile}">Profile</a>
+    </div>
+    <div id="profilearea3" class="header1">|</div>
+    <div id="profilearea4" class="header1">
+        <a th:href="@{/posting}">Post</a>
+    </div>
+    <div id="findf" class="header1">
+        <a th:href="@{/listfriends}"><img src="/img/frn.png"height="30"/></a>
+    </div>
+    <div id="message" class="header1">
+        <a th:href="@{/forecasts}"><img src="/img/temperature.png"height="30" width="30"/></a>
+    </div>
+    <div id="notification" class="header1">
+        <a th:href="@{/headlines}"><img src="/img/headline.png"height="30"/></a></div>
+    <div id="profilearea2" class="header1">|</div>
+    <div  id="setting" class="header1">
+        <a th:href="@{/updateprofile}"><img src="/img/set.png"height="30"/></a>
+    </div>
+    <div id="logout" class="header1">
+        <a th:href="@{/logout}"><img src="/img/lo.png"height="30"/></a>
+    </div>
+</div>
+<div class="container mt-5">
+    <a href="https://www.apixu.com/" class="btn" nbsp;>Powered By APIXU.com</a>
+    <div class="mb-3">
+        <form th:action="@{/forecastswithzipcode}">
+            <div class="form-group">
+                <label for="zipcode"><p12>Enter a Zip Code:</p12></label>
+                <input type="number" name="zipcode" class="form-control">
+            </div>
+            <button class="btn btn-block" type="submit">Submit</button>
+        </form>
+    </div>
+    <h6 class="text-danger" th:if="${badzipentered}">The Zip Code entered is incorrect! Try again!</h6>
+    <h6 class="text-danger" th:if="${badcodeinprofile}">The Zip Code in your profile doesn't exist, Change it!</h6>
+    <h6 class="text-success" th:if="${zipcode}" th:inline="text">One week weather forecast in postal code: [[${zipcode}]]</h6>
+    <div class="card mb-5" th:each="forecast : ${forecasts}" th:inline="text">
+        <div class="card-header">[[${forecast.date}]]</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><img th:src="${forecast.stat.condition.icon}" alt="weather icon"> [[${forecast.stat.condition.text}]]</li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-start">
+                    <div class="w-25"><span>Sunrise: [[${forecast.astro.sunrise}]]</span><br><span>Sunset: [[${forecast.astro.sunset}]]</span></div>
+                    <div class="w-25"><span>Moonrise: [[${forecast.astro.moonrise}]]</span><br><span>Moonset: [[${forecast.astro.moonset}]]</span></div>
+                    <div class=""><span>Max Temp: [[${forecast.stat.maxtemp_c}]] celsius</span><br><span>Min Temp: [[${forecast.stat.mintemp_c}]] celsius</span></div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-start">
+                    <div class="w-25"><span>Temp: [[${forecast.stat.avgtemp_c}]]</span><br><span>Precip: [[${forecast.stat.totalprecip_in}]] inches</span></div>
+                    <div class="w-25"><span>Max Wind: [[${forecast.stat.maxwind_mph}]] mph</span><br><span>Visibility: [[${forecast.stat.avgvis_miles}]] miles</span></div>
+                    <div class=""><span>Humidity: [[${forecast.stat.avghumidity}]]</span><br><span>UV index: [[${forecast.stat.uv}]]</span></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="sunny"></div>
+    <div class="cloudy"></div>
+    <div class="rainy"></div>
+    <div class="snowy"></div>
+    <div class="rainbow"></div>
+    <div class="starry"></div>
+    <div class="stormy"></div>
+</div>
+</body>
+<div th:replace="fragment :: js"></div>
+</html>

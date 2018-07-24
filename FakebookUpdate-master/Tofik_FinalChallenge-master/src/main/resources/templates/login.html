@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+
+</head>
+<body>
+<div class="header1">
+    <div id="img3" class="header1"><a th:href="@{/}"><img src="/img/logo2.png" id="img3"/></a></div>
+    <div id="searcharea" class="header1"><input placeholder="search here..." type="text" id="searchbox"/></div>
+
+    <div id="profilearea1"class="header1" sec:authorize="isAnonymous()">
+        <a class="nav-link" th:href="@{/register}"><p10>Sign Up  |</p10></a>
+    </div>
+
+    <div   id="profilearea4"class="header1" sec:authorize="isAnonymous()">
+        <a class="nav-link" th:href="@{/login}"><p10>Log In</p10></a>
+    </div>
+
+    <div id="logout" class="header1" sec:authorize="isAnonymous()">
+        <a class="nav-link" th:href="@{/manage/users}"><p10>Administrator</p10></a>
+    </div>
+
+</div>
+
+<br><br>
+<div th:replace="fragment :: css"></div>
+<div class="container mt-5">
+    <form th:action="@{/login}" method="post" class="form-signin">
+        <legend>Please Login</legend>
+        <div th:if="${param.error}" class="alert alert-danger" role="alert">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}" class="alert alert-success" role="alert">
+            You have been logged out.
+        </div>
+        <div class="form-label-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required=""
+                   autofocus="">
+        </div>
+        <div class="form-label-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                   required="">
+        </div>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted text-center">© 2018-2019</p>
+    </form>
+</div>
+</body>
+<div th:replace="fragment :: js"></div>
+</html>

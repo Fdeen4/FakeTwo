@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity4">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/ust.css" />
+    <meta charset="UTF-8"/>
+    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div th:fragment="css">
+        <link href="https://fonts.googleapis.com/css?family=Quantico:700" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    </div>
+</head>
+<body>
+<nav th:fragment="navigation">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" th:href="@{/}"><img src="/img/logo2.png"height="30" width="50"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}"><p10>Fakebook</p10></a>
+                </li>
+
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" th:href="@{/profile}"><i class="material-icons" style="font-size:48px;">person</i></a>
+                </li>
+            </ul>
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" th:href="@{/forecasts}"><img src="/img/temperature.png"height="30" width="50"/></a>
+                </li>
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" th:href="@{/headlines}"><img src="/img/headline.png"height="30" width="50"/></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" sec:authorize="isAnonymous()">
+                    <a class="nav-link" th:href="@{/login}">Log In</a>
+                </li>
+                <li class="nav-item" sec:authorize="isAnonymous()">
+                    <a class="nav-link" th:href="@{/register}">Sign Up</a>
+                </li>
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" th:href="@{/logout}"><img src="/img/lo.png"height="30" width="50"/></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</nav>
+
+</body>
+<div th:fragment="js">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</div>
+</html>

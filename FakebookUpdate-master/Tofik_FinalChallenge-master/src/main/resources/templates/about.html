@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity4">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/ust.css" />
+    <meta charset="UTF-8"/>
+    <title th:text="#{appname}">Title</title>
+    <div th:replace="fragment :: css"></div>
+    <link type="text/css" rel="stylesheet" href="/css/ust.css" />
+    <script src="/js/jquery2.js"></script>
+    <script>$(document).ready(function(){
+        $(".box13").click(function(){
+            $(".box13").css('background-color','black');
+            $(".box11").css('background-color','black');
+            $(".box12").css('background-color','black');
+            $(".box14").css('background-color','black');
+            $(".frnpad").fadeIn("slow");
+            $(".frnpadx").fadeIn("slow");
+            $(".aboutpad").fadeOut("slow");
+            $(".aboutpadx").fadeOut("slow");
+            $(".phpad").fadeOut("slow");
+            $(".phpadx").fadeOut("slow");
+            $(".postp").fadeOut("slow");
+            $(".postpx").fadeOut("slow");
+            $(".post1p").fadeOut("slow");
+            $(".post1px").fadeOut("slow");
+            $(".abox1").fadeOut("slow");
+            $(".abox1x").fadeOut("slow");
+            $(".abox2").fadeOut("slow");
+            $(".abox2x").fadeOut("slow");
+            $(".abox3").fadeOut("slow");
+            $(".abox3x").fadeOut("slow");
+        });
+        $(".box14").click(function(){
+            $(".box14").css('background-color','black');
+            $(".box11").css('background-color','black');
+            $(".box12").css('background-color','black');
+            $(".box13").css('background-color','black');
+            $(".phpad").fadeIn("slow");
+            $(".phpadx").fadeIn("slow");
+            $(".aboutpad").fadeOut("slow");
+            $(".aboutpadx").fadeOut("slow");
+            $(".frnpad").fadeOut("slow");
+            $(".frnpadx").fadeOut("slow");
+            $(".postp").fadeOut("slow");
+            $(".postpx").fadeOut("slow");
+            $(".post1p").fadeOut("slow");
+            $(".post1px").fadeOut("slow");
+            $(".abox1").fadeOut("slow");
+            $(".abox1x").fadeOut("slow");
+            $(".abox2").fadeOut("slow");
+            $(".abox2x").fadeOut("slow");
+            $(".abox3").fadeOut("slow");
+            $(".abox3x").fadeOut("slow");
+        });
+        $(".box12").click(function(){
+            $(".box12").css('background-color','black');
+            $(".box11").css('background-color','black');
+            $(".box13").css('background-color','black');
+            $(".box14").css('background-color','black');
+            $(".aboutpad").fadeIn("slow");
+            $(".aboutpadx").fadeIn("slow");
+            $(".frnpad").fadeOut("slow");
+            $(".frnpadx").fadeOut("slow");
+            $(".phpad").fadeOut("slow");
+            $(".phpadx").fadeOut("slow");
+            $(".postp").fadeOut("slow");
+            $(".postpx").fadeOut("slow");
+            $(".post1p").fadeOut("slow");
+            $(".post1px").fadeOut("slow");
+            $(".abox1").fadeOut("slow");
+            $(".abox1x").fadeOut("slow");
+            $(".abox2").fadeOut("slow");
+            $(".abox2x").fadeOut("slow");
+            $(".abox3").fadeOut("slow");
+            $(".abox3x").fadeOut("slow");
+        });
+        $(".box11").click(function(){
+            $(".box11").css('background-color','black');
+            $(".box12").css('background-color','black');
+            $(".box13").css('background-color','black');
+            $(".box14").css('background-color','black');
+            $(".aboutpad").fadeOut("slow");
+            $(".aboutpadx").fadeOut("slow");
+            $(".postp").fadeIn("slow");
+            $(".postpx").fadeIn("slow");
+            $(".post1p").fadeIn("slow");
+            $(".post1px").fadeIn("slow");
+            $(".abox1").fadeIn("slow");
+            $(".abox1x").fadeIn("slow");
+            $(".abox2").fadeIn("slow");
+            $(".abox2x").fadeIn("slow");
+            $(".abox3").fadeIn("slow");
+            $(".abox3x").fadeIn("slow");
+            $(".frnpad").fadeOut("slow");
+            $(".frnpadx").fadeOut("slow");
+            $(".phpad").fadeOut("slow");
+            $(".phpadx").fadeOut("slow");
+
+        });
+        $(".box13").click(function(){})
+
+
+    });
+    </script>
+
+</head>
+<body>
+
+<div class="header1">
+    <div id="img3" class="header1"><a th:href="@{/}"><img src="/img/logo2.png" id="img3"/></a></div>
+    <div id="searcharea" class="header1"><input placeholder="search here..." type="text" id="searchbox"/></div>
+    <div id="profilearea" class="header1"><a th:href="@{/profile}"><i class="material-icons" style="font-size:48px;">person</i></a></div>
+    <div id="profilearea1" class="header1">
+        <a th:href="@{/profile}">Profile</a>
+    </div>
+    <div id="profilearea3" class="header1">|</div>
+    <div id="profilearea4" class="header1">
+        <a th:href="@{/posting}">Post</a>
+    </div>
+    <div id="findf" class="header1">
+        <a th:href="@{/listfriends}"><img src="/img/frn.png"height="30"/></a>
+    </div>
+    <div id="message" class="header1">
+        <a th:href="@{/forecasts}"><img src="/img/temperature.png"height="30" width="30"/></a>
+    </div>
+    <div id="notification" class="header1">
+        <a th:href="@{/headlines}"><img src="/img/headline.png"height="30"/></div>
+    <div id="profilearea2" class="header1">|</div>
+    <div  id="setting" class="header1">
+        <a th:href="@{/updateprofile}"><img src="/img/set.png"height="30"/></a>
+    </div>
+    <div id="logout" class="header1">
+        <a th:href="@{/logout}"><img src="/img/lo.png"height="30"/></a>
+    </div>
+</div>
+</br></br></br>
+<div class="card" style="width: 18rem;">
+        <div th:unless="${aboutprofile.profilepicture}">
+        <img class="card-img-top" src="/img/dummyprofile.jpg" alt="Card image cap">
+        </div>
+        <div th:if="${aboutprofile.profilepicture}">
+            <img class="card-img-top" th:src="${aboutprofile.profilepicture}" alt="Card image cap"/>
+        </div>
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text" th:text="${aboutprofile.fullName}"></p>
+        <p class="card-text" th:text="${aboutprofile.bio}"></p>
+        <p class="card-text" th:text="${aboutprofile.birthDate}"></p>
+        <a th:href="@{/profile}" class="btn btn-primary">View Full Profile</a>
+    </div>
+</div>
+</body>
+<div th:replace="fragment :: js"></div>
+</html>
